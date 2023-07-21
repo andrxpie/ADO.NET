@@ -1,0 +1,1 @@
+﻿insert into Roles (Role) values ('Administrator'), ('Moderator'), ('User')

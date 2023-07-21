@@ -12,6 +12,21 @@ namespace Data_Set_practoc
         public string Password { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
-        public string Role { get; set; }
+        public int Role { get; set; }
+
+        public override string ToString()
+        {
+            string roleStr;
+
+            switch (Role)
+            {
+                case 0: roleStr = "Administrator"; break;
+                case 1: roleStr = "Moderator"; break;
+                case 2: roleStr = "User"; break;
+                default: roleStr = "User"; break;
+            }
+
+            return $"{Login} ({Password}) => {Address}; {Phone}; - {roleStr}";
+        }
     }
 }

@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Data_Set_practoc"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="450" Width="800" FontFamily="Cascadia Code">
+    <DockPanel>
+        <UniformGrid Rows="2" DockPanel.Dock="Top">
+            <Button Background="Black" Foreground="White" Content="Add" Click="Add" Margin="5"/>
+            <Button Background="Black" Foreground="White" Content="Delete" Click="Delete" Margin="5"/>
+            <Button Background="Black" Foreground="White" Content="Load" Click="Load" Margin="5"/>
+            <Button Background="Black" Foreground="White" Content="Update" Click="Update" Margin="5"/>
+        </UniformGrid>
+        <CheckBox x:Name="OnlyAdmins" DockPanel.Dock="Top" HorizontalAlignment="Center" VerticalContentAlignment="Center" Content="Only Administrators"/>
+        <DataGrid x:Name="userList" Margin="10"/>
+    </DockPanel>
 </Window>
