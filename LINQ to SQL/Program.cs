@@ -69,7 +69,7 @@ namespace LINQ_to_SQL
             Console.WriteLine("\n>>>\n");
 
             // 6
-            var mostPagesNotDEMOCRATION = db.Books.OrderByDescending(x => x.Pages).Where(x => x.Author.Country.Name != "USA").Take(1).First();
+            var mostPagesNotDEMOCRATION = db.Books.Where(x => x.Author.Country.Name != "USA").OrderByDescending(x => x.Pages).FirstOrDefault();
 
             if(mostPagesNotDEMOCRATION != null)
                 Console.WriteLine($"[{mostPagesNotDEMOCRATION.Id}] {mostPagesNotDEMOCRATION.Name}");
