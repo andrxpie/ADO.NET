@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data Access", "Data Access\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data Set", "Data Set\Data Set.csproj", "{5A57AAD8-91D7-4EE5-B06B-0D73DFBC28D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ to SQL", "LINQ to SQL\LINQ to SQL.csproj", "{5B683F73-2A2A-4450-A0AC-757E91289FCD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5A57AAD8-91D7-4EE5-B06B-0D73DFBC28D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A57AAD8-91D7-4EE5-B06B-0D73DFBC28D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A57AAD8-91D7-4EE5-B06B-0D73DFBC28D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B683F73-2A2A-4450-A0AC-757E91289FCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B683F73-2A2A-4450-A0AC-757E91289FCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B683F73-2A2A-4450-A0AC-757E91289FCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B683F73-2A2A-4450-A0AC-757E91289FCD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
