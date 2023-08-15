@@ -8,7 +8,7 @@ namespace LINQ_to_SQL
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void NOTMAIN(string[] args)
         {
             LibraryDataContext db = new LibraryDataContext();
 
