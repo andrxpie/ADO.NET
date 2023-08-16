@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data Set", "Data Set\Data S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ to SQL", "LINQ to SQL\LINQ to SQL.csproj", "{5B683F73-2A2A-4450-A0AC-757E91289FCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Access", "Data Access\Data Access.csproj", "{C0C383AC-77C0-4D72-9BE0-11322E945F59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Access #2", "Data Access\Data Access #2.csproj", "{C0C383AC-77C0-4D72-9BE0-11322E945F59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
