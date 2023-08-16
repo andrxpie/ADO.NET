@@ -7,32 +7,34 @@ namespace Entity_Framework_Intro
     {
         static void Main(string[] args)
         {
-            RestaurantDbContext db = new RestaurantDbContext();
+            MusicPlayer db = new MusicPlayer();
 
-            db.Employees.Add(new()
-            {
-                Name = "Andrii",
-                PositionId = 2,
-                Surname = "Povar",
-                Birthdate = new DateTime(1988, 4, 10)
-            });
+            //RestaurantDbContext db = new RestaurantDbContext();
 
-            db.Dishes.Add(new Dish()
-            {
-                Price = 145,
-                Title = "Lobsters",
-                Weight = 220,
-                Description = "I like it!"
-            });
+            //db.Employees.Add(new()
+            //{
+            //    Name = "Andrii",
+            //    PositionId = 2,
+            //    Surname = "Povar",
+            //    Birthdate = new DateTime(1988, 4, 10)
+            //});
 
-            db.SaveChanges();
+            //db.Dishes.Add(new Dish()
+            //{
+            //    Price = 145,
+            //    Title = "Lobsters",
+            //    Weight = 220,
+            //    Description = "I like it!"
+            //});
 
-            var data = db.Dishes.Where(x => x.Price < 1000).OrderBy(x => x.Weight);
+            //db.SaveChanges();
 
-            foreach (var i in data)
-            {
-                Console.WriteLine($"Dish {i.Title} - {i.Price}$ {i.Weight}g");
-            }
+            //var data = db.Dishes.Where(x => x.Price < 1000).OrderBy(x => x.Weight);
+
+            //foreach (var i in data)
+            //{
+            //    Console.WriteLine($"Dish {i.Title} - {i.Price}$ {i.Weight}g");
+            //}
         }
     }
 }
