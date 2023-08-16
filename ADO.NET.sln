@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data Set", "Data Set\Data S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ to SQL", "LINQ to SQL\LINQ to SQL.csproj", "{5B683F73-2A2A-4450-A0AC-757E91289FCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Access #2", "Data Access\Data Access #2.csproj", "{C0C383AC-77C0-4D72-9BE0-11322E945F59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data Access", "Data Access\Data Access.csproj", "{3D3B7B00-D3A6-4F24-92EF-DA882D106841}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{5B683F73-2A2A-4450-A0AC-757E91289FCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B683F73-2A2A-4450-A0AC-757E91289FCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B683F73-2A2A-4450-A0AC-757E91289FCD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C0C383AC-77C0-4D72-9BE0-11322E945F59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0C383AC-77C0-4D72-9BE0-11322E945F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C0C383AC-77C0-4D72-9BE0-11322E945F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C0C383AC-77C0-4D72-9BE0-11322E945F59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D3B7B00-D3A6-4F24-92EF-DA882D106841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D3B7B00-D3A6-4F24-92EF-DA882D106841}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D3B7B00-D3A6-4F24-92EF-DA882D106841}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D3B7B00-D3A6-4F24-92EF-DA882D106841}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
