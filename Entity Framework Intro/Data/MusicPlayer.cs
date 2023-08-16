@@ -67,6 +67,32 @@ namespace Entity_Framework_Intro
             });
         }
 
+        public void CreateNewPlaylist()
+        {
+            Console.Clear();
+            Console.Write("> Create New Playlist\n Name: "); string name = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Choose Category:");
+            foreach (var item in Categories)
+                Console.WriteLine($"[{item.Id}] {item.Name}");
+            Console.Write("?: "); int categoryId = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+
+            int musicId = Tracks.Count();
+            ICollection<Track> tracks;
+            while(musicId != 0)
+            {
+                Console.WriteLine("> Add tracks:");
+                foreach (var item in Tracks)
+                    Console.WriteLine(item);
+                Console.Write("? (type 0 to stop adding): ");
+                musicId = Convert.ToInt32(Console.ReadLine());
+            }
+
+            
+        }
+
         DbSet<Country> Countries { get; set; }
         DbSet<Genre> Genres { get; set; }
         DbSet<Category> Categories { get; set; }

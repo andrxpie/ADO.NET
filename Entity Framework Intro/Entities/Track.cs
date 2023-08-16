@@ -10,5 +10,10 @@ namespace Entity_Framework_Intro
         public Album Albumn { get; set; }
         public TimeSpan Duration { get; set; }
         public ICollection<Playlist> Playlists { get; set; }
+
+        public override string ToString()
+        {
+            return $"[{Id}] {Name} - {Duration.ToString()}";
+        }
     }
 }
