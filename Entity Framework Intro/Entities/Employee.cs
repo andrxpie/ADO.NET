@@ -11,5 +11,6 @@ namespace Entity_Framework_Intro
         public int PositionId { get; set; }
         public Position Position { get; set; }
         public ICollection<Order> Orders { get; set; }
+        
     }
 }

@@ -7,8 +7,8 @@ namespace Entity_Framework_Intro.Data
     {
         public RestaurantDbContext() : base()
         {
-            this.Database.EnsureDeleted();
-            this.Database.EnsureCreated();
+            //this.Database.EnsureDeleted();
+            //this.Database.EnsureCreated();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

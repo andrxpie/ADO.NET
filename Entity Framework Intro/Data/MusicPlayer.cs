@@ -13,7 +13,7 @@ namespace Entity_Framework_Intro
         public MusicPlayer() : base()
         {
             //Database.EnsureDeleted();
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -65,6 +65,22 @@ namespace Entity_Framework_Intro
                 new Country() { Id = 10, Name = "Iceland" },
                 new Country() { Id = 11, Name = "UK" },
             });
+
+            modelBuilder.Entity<Artist>().HasData(new[]
+            {
+                new Artist() { Id = 1, CountryId = 1, Surname = "MoonDeity" }
+            });
+
+            modelBuilder.Entity<Album>().HasData(new []
+            {
+                new Album() { Id = 1, Name = "Debuti of Soul", ArtistId = 1, GenreId = 1, Rating = 10, Year = 2023 }
+            });
+
+            modelBuilder.Entity<Track>().HasData(new[]
+            {
+                new Track() { Id = 1, AlbumId = 1, Listens = 15, Name = "MOVEMENT", Rating = 10, Duration = new TimeSpan(0, 2, 30) },
+                new Track() { Id = 2, AlbumId = 1, Listens = 1, Name = "POOR", Rating = 9, Duration = new TimeSpan(0, 1, 10) }
+            });
         }
 
         public void CreateNewPlaylist()
@@ -93,12 +109,12 @@ namespace Entity_Framework_Intro
             
         }
 
-        DbSet<Country> Countries { get; set; }
-        DbSet<Genre> Genres { get; set; }
-        DbSet<Category> Categories { get; set; }
-        DbSet<Artist> Artists { get; set; }
-        DbSet<Album> Albumns { get; set; }
-        DbSet<Track> Tracks { get; set; }
-        DbSet<Playlist> Playlists { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<Genre> Genres { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Artist> Artists { get; set; }
+        public DbSet<Album> Albums { get; set; }
+        public DbSet<Track> Tracks { get; set; }
+        public DbSet<Playlist> Playlists { get; set; }
     }
 }
