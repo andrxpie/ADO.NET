@@ -10,40 +10,7 @@ using System.Xml.Linq;
 
 namespace Data_Access
 {
-    public class Sellers
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-
-        public override string ToString()
-        {
-            return $"{Id} => {Name} {Surname}";
-        }
-    }
-
-    public class Customers
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-    }
-
-    public class TSells
-    {
-        public int Id { get; set; }
-        public int CustomerId { get; set; }
-        public int SellerId { get; set; }
-        public decimal Price { get; set; }
-        public DateTime Date { get; set; }
-
-        public override string ToString()
-        {
-            return $"{Id} => {CustomerId}, {SellerId} ({Price}$ - {Date.ToString("yyyy-MM-dd")})";
-        }
-    }
-
-    internal class Data
+    public class Data
     {
         private SqlConnection connection = null;
         private int rows = 20;
@@ -127,6 +94,62 @@ where Date between @p1 and @p2";
                     CustomerId = (int)reader["CustomerId"],
                     Date = (DateTime)reader["Date"],
                     Price = (decimal)reader["Price"]
+                };
+            }
+        }
+
+        public IEnumerable<Sellers> GetSellers()
+        {
+            string cmdText = "select * from Sellers";
+            SqlCommand command = new SqlCommand(cmdText, connection);
+
+            using var reader = command.ExecuteReader();
+
+            while(reader.Read())
+            {
+                yield return new Sellers()
+                {
+                    Id = (int)reader["Id"],
+                    Name = (string)reader["Name"],
+                    Surname = (string)reader["Surname"]
+                };
+            }
+        }
+
+        public IEnumerable<Customers> GetCustomers()
+        {
+            string cmdText = "select * from Customers";
+            SqlCommand command = new SqlCommand(cmdText, connection);
+
+            using var reader = command.ExecuteReader();
+
+            while(reader.Read())
+            {
+                yield return new Customers()
+                {
+                    Id = (int)reader["Id"],
+                    Name = (string)reader["Name"],
+                    Surname = (string)reader["Surname"]
+                };
+            }
+        }
+
+        public IEnumerable<TSells> GetSells()
+        {
+            string cmdText = "select * from TSells";
+            SqlCommand command = new SqlCommand(cmdText, connection);
+
+            using var reader = command.ExecuteReader();
+
+            while(reader.Read())
+            {
+                yield return new TSells()
+                {
+                    Id = (int)reader["Id"],
+                    CustomerId = (int)reader["CustomerId"],
+                    SellerId = (int)reader["SellerId"],
+                    Price = (decimal)reader["Price"],
+                    Date = (DateTime)reader["Date"]
                 };
             }
         }
