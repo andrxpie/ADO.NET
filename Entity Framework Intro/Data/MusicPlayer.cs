@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -95,8 +96,8 @@ namespace Entity_Framework_Intro
             Console.Write("?: "); int categoryId = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
 
-            int musicId = Tracks.Count();
-            ICollection<Track> tracks;
+            int musicId = -1;
+            ICollection<Track> tracks = new Collection<Track>();
             while(musicId != 0)
             {
                 Console.WriteLine("> Add tracks:");
@@ -104,9 +105,11 @@ namespace Entity_Framework_Intro
                     Console.WriteLine(item);
                 Console.Write("? (type 0 to stop adding): ");
                 musicId = Convert.ToInt32(Console.ReadLine());
-            }
 
+                tracks.Add(Tracks.Where(x => x.Id == musicId).FirstOrDefault());
+            }
             
+            Playlists.Add(new Playlist() { Name = name, CategoryId = categoryId, Track = tracks });
         }
 
         public DbSet<Country> Countries { get; set; }

@@ -9,21 +9,38 @@ namespace Entity_Framework_Intro
         static void Main(string[] args)
         {
             MusicPlayer db = new MusicPlayer();
+            db.Tracks.Add(new Track()
+            {
+                Name = "Neon Blade",
+                Duration = new TimeSpan(0, 2, 20),
+                Listens = 15,
+                Rating = 10
+            });
+            
+            db.Tracks.Add(new Track()
+            {
+                Name = "Neon Blade 2",
+                Duration = new TimeSpan(0, 3, 15),
+                Listens = 135,
+                Rating = 130
+            });
+
+            db.CreateNewPlaylist();
 
             // 1
-            Album album1 = new Album() { Id = 1, Name = "Debuti of Soul", ArtistId = 1, GenreId = 1, Rating = 10, Year = 2023};
-            string playListName1 = Console.ReadLine();
-            var showTracks1 = db.Tracks.Where(x => x.Album.Name == playListName1 && x.Listens > db.Tracks.Average(y => y.Listens));
+            //Album album1 = new Album() { Id = 1, Name = "Debuti of Soul", ArtistId = 1, GenreId = 1, Rating = 10, Year = 2023};
+            //string playListName1 = Console.ReadLine();
+            //var showTracks1 = db.Tracks.Where(x => x.Album.Name == playListName1 && x.Listens > db.Tracks.Average(y => y.Listens));
 
             // 2
-            string surname = "MoonDeity";
-            var showTracks2 = db.Tracks.Where(x => x.Album.Artist.Surname == surname).OrderByDescending(x => x.Rating).Take(3);
-            var showAlbums2 = db.Albums.Where(x => x.Artist.Surname == surname).OrderByDescending(x => x.Rating).Take(3);
+            //string surname = "MoonDeity";
+            //var showTracks2 = db.Tracks.Where(x => x.Album.Artist.Surname == surname).OrderByDescending(x => x.Rating).Take(3);
+            //var showAlbums2 = db.Albums.Where(x => x.Artist.Surname == surname).OrderByDescending(x => x.Rating).Take(3);
 
             // 3
-            string trackName = "OVEMENT";
-            string trackLyrics = "FAST";
-            var showTracks3 = db.Tracks.Where(x => x.Name.Contains(trackName) || x.Lyrics.Contains(trackLyrics));
+            //string trackName = "OVEMENT";
+            //string trackLyrics = "FAST";
+            //var showTracks3 = db.Tracks.Where(x => x.Name.Contains(trackName) || x.Lyrics.Contains(trackLyrics));
 
             //RestaurantDbContext db = new RestaurantDbContext();
 
