@@ -19,5 +19,7 @@ namespace Loadings
         public int CityId { get; set; }
         public City City { get; set; }
         public int? ParkingArea { get; set; }
+        ICollection<Product> Products { get; set; }
+        ICollection<Worker> Workers { get; set; }
     }
 }
