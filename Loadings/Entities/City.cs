@@ -10,12 +10,11 @@ namespace Loadings
 {
     public class City
     {
-        [Key]
         public int Id { get; set; }
         public string Name { get; set; }
 
-        [ForeignKey("Country")]
         public int CountryId { get; set; }
         public Country Country { get; set; }
+        public ICollection<Shop> Shops { get; set; }
     }
 }
