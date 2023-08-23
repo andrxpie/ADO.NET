@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data Access - Class Library
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data Access - WPF", "Data Access - WPF\Data Access - WPF.csproj", "{471D3B22-E96A-43DA-B067-3AD6830617C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loadings", "Loadings\Loadings.csproj", "{4DEC2AA8-CA19-41C8-8129-3EF92339C0BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loadings", "Loadings\Loadings.csproj", "{4DEC2AA8-CA19-41C8-8129-3EF92339C0BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
