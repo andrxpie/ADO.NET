@@ -10,8 +10,13 @@ namespace EF___Airlines__hw_
 {
     public class City
     {
+        [Key]
         public int Id { get; set; }
+
+        [Required]
         public string Name { get; set; }
+
+        [ForeignKey ("Country")]
         public int CountryId { get; set; }
         public Country Country { get; set; }
         public ICollection<Flights> Flights { get; set; }
