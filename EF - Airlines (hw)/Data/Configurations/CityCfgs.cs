@@ -13,6 +13,7 @@ namespace EF___Airlines__hw_
     {
         public void Configure(EntityTypeBuilder<City> builder)
         {
+            builder.HasKey(x => x.Id);
             builder.Property(x => x.Name).IsRequired();
             builder.HasData(new[]
             {

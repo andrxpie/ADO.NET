@@ -17,6 +17,7 @@ namespace EF___Airlines__hw_
             builder.Property(x => x.Model).IsRequired();
             builder.HasOne(x => x.Type).WithMany(x => x.Airlplanes).HasForeignKey(x => x.TypeId).IsRequired();
             builder.HasOne(x => x.Country).WithMany(x => x.Airplanes).HasForeignKey(x => x.CountryId).IsRequired();
+            builder.HasMany(x => x.Flights).WithOne(x => x.Airplane).HasForeignKey(x => x.AirplaneId);
         }
     }
 }

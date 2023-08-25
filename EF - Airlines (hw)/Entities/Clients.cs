@@ -17,5 +17,6 @@ namespace EF___Airlines__hw_
         public bool IsMale { get; set; }
         public int AccountId { get; set; }
         public CAccount Account { get; set; }
+        public ICollection<Flights> Flights { get; set; }
     }
 }

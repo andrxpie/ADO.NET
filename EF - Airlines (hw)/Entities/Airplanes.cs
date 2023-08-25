@@ -14,5 +14,6 @@ namespace EF___Airlines__hw_
         public AType Type { get; set; }
         public int CountryId { get; set; }
         public Country Country { get; set; }
+        public ICollection<Flights> Flights { get; set; }
     }
 }
