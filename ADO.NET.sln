@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data Access", "Data Access\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity Framework Intro", "Entity Framework Intro\Entity Framework Intro.csproj", "{DFB4466D-DEEB-4A2D-AAB4-24A6A118029F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Access - Class Library", "Data Access - Class Library\Data Access - Class Library.csproj", "{C4615A9B-15DF-4815-9570-6F6280B2B33B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data Access - Class Library", "Data Access - Class Library\Data Access - Class Library.csproj", "{C4615A9B-15DF-4815-9570-6F6280B2B33B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Access - WPF", "Data Access - WPF\Data Access - WPF.csproj", "{471D3B22-E96A-43DA-B067-3AD6830617C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data Access - WPF", "Data Access - WPF\Data Access - WPF.csproj", "{471D3B22-E96A-43DA-B067-3AD6830617C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loadings", "Loadings\Loadings.csproj", "{4DEC2AA8-CA19-41C8-8129-3EF92339C0BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{471D3B22-E96A-43DA-B067-3AD6830617C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{471D3B22-E96A-43DA-B067-3AD6830617C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{471D3B22-E96A-43DA-B067-3AD6830617C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DEC2AA8-CA19-41C8-8129-3EF92339C0BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DEC2AA8-CA19-41C8-8129-3EF92339C0BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DEC2AA8-CA19-41C8-8129-3EF92339C0BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DEC2AA8-CA19-41C8-8129-3EF92339C0BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

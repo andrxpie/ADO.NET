@@ -9,6 +9,23 @@ namespace Entity_Framework_Intro
         static void Main(string[] args)
         {
             MusicPlayer db = new MusicPlayer();
+            db.Tracks.Add(new Track()
+            {
+                Name = "Neon Blade",
+                Duration = new TimeSpan(0, 2, 20),
+                Listens = 15,
+                Rating = 10
+            });
+            
+            db.Tracks.Add(new Track()
+            {
+                Name = "Neon Blade 2",
+                Duration = new TimeSpan(0, 3, 15),
+                Listens = 135,
+                Rating = 130
+            });
+
+            db.CreateNewPlaylist();
 
             // 1
             //Album album1 = new Album() { Id = 1, Name = "Debuti of Soul", ArtistId = 1, GenreId = 1, Rating = 10, Year = 2023};
