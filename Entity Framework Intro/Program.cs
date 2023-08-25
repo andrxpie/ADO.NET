@@ -11,19 +11,28 @@ namespace Entity_Framework_Intro
             MusicPlayer db = new MusicPlayer();
 
             // 1
-            Album album1 = new Album() { Id = 1, Name = "Debuti of Soul", ArtistId = 1, GenreId = 1, Rating = 10, Year = 2023};
-            string playListName1 = Console.ReadLine();
-            var showTracks1 = db.Tracks.Where(x => x.Album.Name == playListName1 && x.Listens > db.Tracks.Average(y => y.Listens));
+            //Album album1 = new Album() { Id = 1, Name = "Debuti of Soul", ArtistId = 1, GenreId = 1, Rating = 10, Year = 2023};
+            //string playListName1 = Console.ReadLine();
+            //var showTracks1 = db.Tracks.Where(x => x.Album.Name == playListName1 && x.Listens > db.Tracks.Average(y => y.Listens));
 
             // 2
-            string surname = "MoonDeity";
-            var showTracks2 = db.Tracks.Where(x => x.Album.Artist.Surname == surname).OrderByDescending(x => x.Rating).Take(3);
-            var showAlbums2 = db.Albums.Where(x => x.Artist.Surname == surname).OrderByDescending(x => x.Rating).Take(3);
+            //string surname = "MoonDeity";
+            //var showTracks2 = db.Tracks.Where(x => x.Album.Artist.Surname == surname).OrderByDescending(x => x.Rating).Take(3);
+            //var showAlbums2 = db.Albums.Where(x => x.Artist.Surname == surname).OrderByDescending(x => x.Rating).Take(3);
 
             // 3
-            string trackName = "OVEMENT";
-            string trackLyrics = "FAST";
-            var showTracks3 = db.Tracks.Where(x => x.Name.Contains(trackName) || x.Lyrics.Contains(trackLyrics));
+            //string trackName = "OVEMENT";
+            //string trackLyrics = "FAST";
+            //var showTracks3 = db.Tracks.Where(x => x.Name.Contains(trackName) || x.Lyrics.Contains(trackLyrics));
+
+            // 4
+            var playLists1 = db.Playlists.Select(x => x.Name);
+            foreach (var playList in playLists1)
+                Console.WriteLine(playList);
+            db.CreateNewPlaylist();
+            playLists1 = db.Playlists.Select(x => x.Name);
+            foreach (var playList in playLists1)
+                Console.WriteLine(playList);
 
             //RestaurantDbContext db = new RestaurantDbContext();
 

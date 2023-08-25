@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace Entity_Framework_Intro
         public MusicPlayer() : base()
         {
             //Database.EnsureDeleted();
-            //Database.EnsureCreated();
+            Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -96,17 +97,25 @@ namespace Entity_Framework_Intro
             Console.Clear();
 
             int musicId = Tracks.Count();
-            ICollection<Track> tracks;
+            ICollection<Track> tracks = new Collection<Track>();
             while(musicId != 0)
             {
                 Console.WriteLine("> Add tracks:");
                 foreach (var item in Tracks)
                     Console.WriteLine(item);
-                Console.Write("? (type 0 to stop adding): ");
+                Console.Write("\n(Type 0 to stop adding)\nId: ");
                 musicId = Convert.ToInt32(Console.ReadLine());
+
+                if(musicId == 0) break;
+
+                tracks.Add(Tracks.Where(x => x.Id == musicId).FirstOrDefault());
+
+                Console.WriteLine();
             }
 
-            
+            Playlists.Add(new Playlist() { CategoryId = categoryId, Name = name, Track = tracks });
+
+            SaveChanges();
         }
 
         public DbSet<Country> Countries { get; set; }
