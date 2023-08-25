@@ -14,6 +14,13 @@ namespace Loadings
         public void Configure(EntityTypeBuilder<Position> builder)
         {
             builder.HasKey(x => x.Id).HasName("Positions");
+
+            builder.HasData(new[]
+            {
+                new Position { Id = 1, Name = "Boss" },
+                new Position { Id = 2, Name = "Accountant" },
+                new Position { Id = 3, Name = "Worker" },
+            });
         }
     }
 }
