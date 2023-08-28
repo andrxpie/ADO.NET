@@ -15,6 +15,5 @@ namespace EF___Airlines__hw_
         }
 
         DbSet<Airplanes> Airplanes { get; set; }
-        DbSet<>
     }
 }
