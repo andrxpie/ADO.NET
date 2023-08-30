@@ -5,8 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Spotify_Premium_Lite"
         mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Bold"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Left">
+            <StackPanel DockPanel.Dock="Top" Background="{StaticResource PrimaryHueMidBrush}" Margin="5">
+                <Button Background="Transparent" BorderBrush="Transparent" Margin="5 5 5 0" FontSize="10" HorizontalContentAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon VerticalAlignment="Center" Kind="Home" Margin="0 0 2 0"/>
+                        <TextBlock VerticalAlignment="Center" FontSize="12">Home</TextBlock>
+                    </StackPanel>
+                </Button>
 
-    </Grid>
+                <Button Background="Transparent" BorderBrush="Transparent" Margin="5" FontSize="10" HorizontalContentAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon VerticalAlignment="Center" Kind="Search" Margin="0 0 2 0"/>
+                        <TextBlock VerticalAlignment="Center" FontSize="12">Search</TextBlock>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+            <StackPanel Background="{StaticResource PrimaryHueMidBrush}" Margin="5">
+                <Button Background="Transparent" BorderBrush="Transparent" Margin="5 5 5 0" FontSize="10" HorizontalContentAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon VerticalAlignment="Center" Kind="Library" Margin="0 0 2 0"/>
+                        <TextBlock VerticalAlignment="Center" FontSize="12">Your Library</TextBlock>
+                        <materialDesign:PackIcon VerticalAlignment="Center" HorizontalAlignment="Right" Kind="Plus" Margin="0 0 2 0"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </DockPanel>
+    </DockPanel>
 </Window>

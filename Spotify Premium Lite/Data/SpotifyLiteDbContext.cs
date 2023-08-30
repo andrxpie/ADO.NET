@@ -13,7 +13,7 @@ namespace Spotify_Premium_Lite
         {
             base.OnConfiguring(optionsBuilder);
 
-            optionsBuilder.UseSqlServer();
+            optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SpotifyLite;Integrated Security=True;Connect Timeout=2;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
