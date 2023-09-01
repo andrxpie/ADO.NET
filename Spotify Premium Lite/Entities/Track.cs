@@ -17,5 +17,6 @@ namespace Spotify_Premium_Lite
         public TimeSpan Duration { get; set; }
         public string? Picture { get; set; }
         public ICollection<Playlist> Playlists { get; set; }
+        public string? Lyrics { get; set; }
     }
 }

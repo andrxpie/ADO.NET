@@ -19,9 +19,13 @@ namespace Spotify_Premium_Lite
     /// </summary>
     public partial class MainWindow : Window
     {
+        SpotifyLiteDbContext database;
+        User currUser = null;
+        ICollection<Playlist> lastest = null;
+
         public MainWindow()
         {
-            InitializeComponent();
+            database = new SpotifyLiteDbContext();
         }
     }
 }

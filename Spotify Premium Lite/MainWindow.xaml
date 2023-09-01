@@ -32,15 +32,53 @@
                 </Button>
             </StackPanel>
 
-            <StackPanel Background="{StaticResource PrimaryHueMidBrush}" Margin="5">
-                <Button Background="Transparent" BorderBrush="Transparent" Margin="5 5 5 0" FontSize="10" HorizontalContentAlignment="Left">
+            <UniformGrid Rows="1" Background="{StaticResource PrimaryHueMidBrush}" Margin="5">
+                <StackPanel>
+                    <Button Background="Transparent" BorderBrush="Transparent" Margin="5 5 5 0" FontSize="10" HorizontalContentAlignment="Left">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon VerticalAlignment="Center" Kind="Library" Margin="0 0 2 0"/>
+                            <TextBlock VerticalAlignment="Center" FontSize="12">Your Library</TextBlock>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+
+                <Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0 5 5 0" Background="Transparent" BorderBrush="Transparent">
+                    <materialDesign:PackIcon Kind="Plus" HorizontalAlignment="Center"/>
+                </Button>
+            </UniformGrid>
+        </DockPanel>
+
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Border Background="{StaticResource MaterialDesignDarkForeground}" CornerRadius="15" Margin="0 10">
+                <Button Background="Transparent" BorderBrush="Transparent" Foreground="Black">Explore Premium</Button>
+            </Border>
+
+            <Border Background="Black" CornerRadius="15" Margin="10 10 10 10">
+                <Button Background="Transparent" BorderBrush="Transparent">
                     <StackPanel Orientation="Horizontal">
-                        <materialDesign:PackIcon VerticalAlignment="Center" Kind="Library" Margin="0 0 2 0"/>
-                        <TextBlock VerticalAlignment="Center" FontSize="12">Your Library</TextBlock>
-                        <materialDesign:PackIcon VerticalAlignment="Center" HorizontalAlignment="Right" Kind="Plus" Margin="0 0 2 0"/>
+                        <materialDesign:PackIcon Kind="Download" VerticalAlignment="Bottom"/>
+                        <TextBlock Text="Install App"/>
                     </StackPanel>
                 </Button>
-            </StackPanel>
-        </DockPanel>
+            </Border>
+
+            <Border CornerRadius="15" Margin="10 10">
+                <Button Background="Transparent" BorderBrush="Transparent">
+                    <Image Height="30" Width="30" x:Name="currUserAvatar" Source="{Binding currUser.Image, FallbackValue=https://i.scdn.co/image/ab67757000003b82368223ebc3bb84b274fc8365}"/>
+                </Button>
+            </Border>
+                
+        </StackPanel>
+
+        <ListView ItemsSource="{Binding lastest}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <DockPanel>
+                        <Image DockPanel.Dock="Left" Source="{Binding lastest.Image, FallbackValue=https://i.scdn.co/image/ab67616d00001e0233364d6b6fd36894f1a3b506}"/>
+                        <TextBlock Text="{Binding lastest.Name, FallbackValue=}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                    </DockPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </DockPanel>
 </Window>
