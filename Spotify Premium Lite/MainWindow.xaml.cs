@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,13 +20,14 @@ namespace Spotify_Premium_Lite
     /// </summary>
     public partial class MainWindow : Window
     {
-        SpotifyLiteDbContext database;
-        User currUser = null;
-        ICollection<Playlist> lastest = null;
-
         public MainWindow()
         {
-            database = new SpotifyLiteDbContext();
+            DataContext = new ViewModel();
+        }
+
+        private void InstallAppButton(object sender, RoutedEventArgs e)
+        {
+            Process.Start("MicrosoftEdge.exe", @"https://download.scdn.co/SpotifySetup.exe");
         }
     }
 }

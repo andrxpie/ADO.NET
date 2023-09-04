@@ -21,7 +21,6 @@ namespace Spotify_Premium_Lite
                 new Country { Id = 2, Name = "USA" },
                 new Country { Id = 3, Name = "UK" },
                 new Country { Id = 4, Name = "Italy" },
-                new Country { Id = 5, Name = "Japan" },
                 new Country { Id = 5, Name = "China" },
                 new Country { Id = 6, Name = "South Korea" },
                 new Country { Id = 7, Name = "North Korea" },
@@ -36,6 +35,7 @@ namespace Spotify_Premium_Lite
                 new Country { Id = 16, Name = "Brazil" },
                 new Country { Id = 17, Name = "Estonia" },
                 new Country { Id = 18, Name = "Afghanistan" },
+                new Country { Id = 19, Name = "Japan" },
             });
         }
     }

@@ -34,7 +34,7 @@
 
             <UniformGrid Rows="1" Background="{StaticResource PrimaryHueMidBrush}" Margin="5">
                 <StackPanel>
-                    <Button Background="Transparent" BorderBrush="Transparent" Margin="5 5 5 0" FontSize="10" HorizontalContentAlignment="Left">
+                    <Button Background="Transparent" BorderBrush="Transparent" Margin="5 5 5 0" FontSize="10" HorizontalContentAlignment="Left" Click="InstallAppButton">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon VerticalAlignment="Center" Kind="Library" Margin="0 0 2 0"/>
                             <TextBlock VerticalAlignment="Center" FontSize="12">Your Library</TextBlock>
@@ -61,24 +61,33 @@
                     </StackPanel>
                 </Button>
             </Border>
-
-            <Border CornerRadius="15" Margin="10 10">
-                <Button Background="Transparent" BorderBrush="Transparent">
-                    <Image Height="30" Width="30" x:Name="currUserAvatar" Source="{Binding currUser.Image, FallbackValue=https://i.scdn.co/image/ab67757000003b82368223ebc3bb84b274fc8365}"/>
-                </Button>
-            </Border>
-                
         </StackPanel>
 
-        <ListView ItemsSource="{Binding lastest}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <DockPanel>
-                        <Image DockPanel.Dock="Left" Source="{Binding lastest.Image, FallbackValue=https://i.scdn.co/image/ab67616d00001e0233364d6b6fd36894f1a3b506}"/>
-                        <TextBlock Text="{Binding lastest.Name, FallbackValue=}" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                    </DockPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <Border Margin="5">
+            <ItemsControl ItemsSource="{Binding lastest}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Grid.RowSpan="2" Background="#595959">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Image Margin="5" Grid.Column="0" Source="{Binding Picture}"/>
+                            <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Name}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Border>                
     </DockPanel>
 </Window>
