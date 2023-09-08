@@ -20,9 +20,9 @@ namespace Spotify_Premium_Lite
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(SpotifyLiteDbContext db)
         {
-            DataContext = new ViewModel();
+            DataContext = new ViewModel(db);
         }
 
         private void InstallAppButton(object sender, RoutedEventArgs e)
