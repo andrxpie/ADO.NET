@@ -20,7 +20,7 @@ namespace Spotify_Premium_Lite
             {
                 new User { Id = 1, Login = "login1", Password = "password1", Email = "super@google.com", Nickname = "greatestGoogleUser" },
                 new User { Id = 2, Login = "1nigol", Password = "1drowssap", Email = "repus@elgoog.moc", Nickname = "resUelgooGtsetaerg" },
-                new User { Id = 3, Login = "log", Password = "pas", Nickname = "s1mple", Avatar = "https://i.scdn.co/image/ab67757000003b82368223ebc3bb84b274fc8365" }
+                new User { Id = 3, Login = "log", Password = "pas", Nickname = "s1mple", Avatar = "images\\gray.png" }
             });
         }
     }

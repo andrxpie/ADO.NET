@@ -9,6 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\avatar.jpg" />
+    <None Remove="images\chaxs thexry.jpg" />
+    <None Remove="images\gray.png" />
+    <None Remove="images\Neon Blade 2.jpg" />
+    <None Remove="images\Neon Blade.jpg" />
+    <None Remove="images\psychx.jpg" />
+    <None Remove="images\spotifyLite.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.10" />
@@ -16,6 +26,16 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\avatar.jpg" />
+    <Resource Include="images\chaxs thexry.jpg" />
+    <Resource Include="images\gray.png" />
+    <Resource Include="images\Neon Blade 2.jpg" />
+    <Resource Include="images\Neon Blade.jpg" />
+    <Resource Include="images\psychx.jpg" />
+    <Resource Include="images\spotifyLite.png" />
   </ItemGroup>
 
 </Project>

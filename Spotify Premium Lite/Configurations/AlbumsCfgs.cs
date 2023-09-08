@@ -20,10 +20,10 @@ namespace Spotify_Premium_Lite
 
             builder.HasData(new[]
             {
-                new Album { Id = 1, Name = "Neon Blade", ArtistId = 1, Description = "Single", Listens = 4324156, Picture = "https://i.scdn.co/image/ab67616d00001e0233364d6b6fd36894f1a3b506" },
-                new Album { Id = 2, Name = "chaxs thexry", ArtistId = 2, Listens = 927523, Picture = "https://i.scdn.co/image/ab67616d00001e0287a9495fd25dfa23e68a9e66" },
-                new Album { Id = 3, Name = "PSYCHX", ArtistId = 2, Listens = 734634, Picture = "https://i.scdn.co/image/ab67616d00001e02be40ee61162ba11a45328795" },
-                new Album { Id = 4, Name = "Burst", ArtistId = 3, Description = "Faster than Light", Listens = 5, Picture = "https://th.bing.com/th?id=OSK.HNYBhQCCy91WIww1kvaZoVZmKw7TBLm9c8pWdTBe305ZU5U&w=122&h=122&c=7&o=6&oif=webp&pid=SANGAM" }
+                new Album { Id = 1, Name = "Neon Blade", ArtistId = 1, Description = "Single", Listens = 4324156, Picture = "images\\Neon Blade.jpg" },
+                new Album { Id = 2, Name = "chaxs thexry", ArtistId = 2, Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", Listens = 927523, Picture = "images\\chaxs thexry.jpg" },
+                new Album { Id = 3, Name = "PSYCHX", ArtistId = 2, Listens = 734634, Picture = "images\\psychx.jpg" },
+                new Album { Id = 4, Name = "Burst", ArtistId = 3, Description = "Faster than Light. Faster than Light. Faster than Light. Faster than Light. Faster than Light. Faster than Light. Faster than Light. Faster than Light. Faster than Light. Faster than Light. Faster than Light. Faster than Light. Faster than Light. Faster than Light. Faster than Light.", Listens = 5 }
             });
         }
     }

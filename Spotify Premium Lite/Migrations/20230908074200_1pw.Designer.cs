@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Spotify_Premium_Lite;
 
@@ -11,9 +12,11 @@ using Spotify_Premium_Lite;
 namespace Spotify_Premium_Lite.Migrations
 {
     [DbContext(typeof(SpotifyLiteDbContext))]
-    partial class SpotifyLiteDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230908074200_1pw")]
+    partial class _1pw
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -82,7 +85,6 @@ namespace Spotify_Premium_Lite.Migrations
                         {
                             Id = 2,
                             ArtistId = 2,
-                            Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                             Listens = 927523,
                             Name = "chaxs thexry",
                             Picture = "images\\chaxs thexry.jpg"
@@ -91,7 +93,6 @@ namespace Spotify_Premium_Lite.Migrations
                         {
                             Id = 3,
                             ArtistId = 2,
-                            Description = "No description",
                             Listens = 734634,
                             Name = "PSYCHX",
                             Picture = "images\\psychx.jpg"
@@ -524,7 +525,7 @@ namespace Spotify_Premium_Lite.Migrations
                             Duration = new TimeSpan(0, 0, 2, 30, 0),
                             Listens = 15523064,
                             Name = "Neon Blade",
-                            Picture = "images\\Neon Blade.jpg"
+                            Picture = "https://i.scdn.co/image/ab67616d00001e0233364d6b6fd36894f1a3b506"
                         },
                         new
                         {
@@ -533,7 +534,7 @@ namespace Spotify_Premium_Lite.Migrations
                             Duration = new TimeSpan(0, 0, 1, 45, 0),
                             Listens = 5553236,
                             Name = "Neon Blade 2",
-                            Picture = "images\\Neon Blade 2.jpg"
+                            Picture = "https://i.scdn.co/image/ab67616d00001e0200c44aebaaa37ef468709f01"
                         },
                         new
                         {
@@ -542,7 +543,7 @@ namespace Spotify_Premium_Lite.Migrations
                             Duration = new TimeSpan(0, 0, 3, 40, 0),
                             Listens = 35275927,
                             Name = "King, Scar.",
-                            Picture = "images\\chaxs thexry.jpg"
+                            Picture = "https://i.scdn.co/image/ab67616d00001e0287a9495fd25dfa23e68a9e66"
                         },
                         new
                         {
@@ -551,7 +552,7 @@ namespace Spotify_Premium_Lite.Migrations
                             Duration = new TimeSpan(0, 0, 3, 32, 0),
                             Listens = 5835259,
                             Name = "Chain$Aw",
-                            Picture = "images\\chaxs thexry.jpg"
+                            Picture = "https://i.scdn.co/image/ab67616d00001e0287a9495fd25dfa23e68a9e66"
                         },
                         new
                         {
@@ -560,7 +561,7 @@ namespace Spotify_Premium_Lite.Migrations
                             Duration = new TimeSpan(0, 0, 2, 13, 0),
                             Listens = 734574,
                             Name = "MISS ME?",
-                            Picture = "images\\psychx"
+                            Picture = "https://i.scdn.co/image/ab67616d00001e02be40ee61162ba11a45328795"
                         });
                 });
 
@@ -597,7 +598,7 @@ namespace Spotify_Premium_Lite.Migrations
                         new
                         {
                             Id = 1,
-                            Avatar = "images\\avatar.jpg",
+                            Avatar = "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
                             Email = "super@google.com",
                             Login = "login1",
                             Nickname = "greatestGoogleUser",
@@ -606,7 +607,7 @@ namespace Spotify_Premium_Lite.Migrations
                         new
                         {
                             Id = 2,
-                            Avatar = "images\\avatar.jpg",
+                            Avatar = "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png",
                             Email = "repus@elgoog.moc",
                             Login = "1nigol",
                             Nickname = "resUelgooGtsetaerg",
@@ -615,7 +616,7 @@ namespace Spotify_Premium_Lite.Migrations
                         new
                         {
                             Id = 3,
-                            Avatar = "images\\gray.png",
+                            Avatar = "https://i.scdn.co/image/ab67757000003b82368223ebc3bb84b274fc8365",
                             Login = "log",
                             Nickname = "s1mple",
                             Password = "pas"

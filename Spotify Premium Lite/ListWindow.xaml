@@ -1,0 +1,76 @@
+﻿<Window x:Class="Spotify_Premium_Lite.ListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Spotify_Premium_Lite"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Bold"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="{Binding currAlbum.Name}" Icon="images\spotifyLite.png" Height="600" MinHeight="600" Width="1200" MinWidth="1200">
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Top" LastChildFill="False" Margin="40">
+            <DockPanel>
+                <Border CornerRadius="20" DockPanel.Dock="Left" VerticalAlignment="Top" MinWidth="200" MinHeight="200" MaxWidth="200" MaxHeight="200" Margin="0 0 50 0">
+                    <Border.Background>
+                        <ImageBrush Stretch="Fill" ImageSource="{Binding currAlbum.Picture}"/>
+                    </Border.Background>
+                </Border>
+
+                <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Left" Text="Album" Margin="0 20 0 0" FontSize="20"/>
+
+                <DockPanel DockPanel.Dock="Top" LastChildFill="False">
+                    <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding currArtist.Name, FallbackValue=Name}" FontSize="18"/>
+                    <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding currArtist.Surname, FallbackValue=Surname}" Margin="5 0 0 0" FontSize="18"/>
+                    <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text=" - " FontSize="18"/>
+                    <TextBlock DockPanel.Dock="Left" HorizontalAlignment="Left" Text="{Binding currArtist.Nickname, FallbackValue=Nickname}" FontSize="18"/>
+                </DockPanel>
+                
+                <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Left" Text="{Binding Popularity, FallbackValue=Popularity: 1203953}" FontSize="12"/>
+
+                <DockPanel VerticalAlignment="Center"
+                            Margin="0 40 0 0">
+
+                    <TextBlock VerticalAlignment="Center"
+                                Margin="0 40 0 20"
+                                HorizontalAlignment="Left"
+                                Text="{Binding currAlbum.Name, FallbackValue=Neon Blade}" FontSize="35"/>
+                </DockPanel>
+            </DockPanel>
+
+            <DockPanel DockPanel.Dock="Right" LastChildFill="False" Margin="40 0 0 0">
+                <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Right" Text="Description:" FontSize="40"/>
+                <TextBlock DockPanel.Dock="Top" TextWrapping="Wrap" TextAlignment="Right" HorizontalAlignment="Right" Text="{Binding currAlbum.Description}" FontSize="15"/>
+            </DockPanel> 
+        </DockPanel>
+
+        <Border Margin="5">
+            <ItemsControl ItemsSource="{Binding tracks}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border CornerRadius="5" Background="#393939" Margin="5">
+                            <DockPanel>
+                                <Button DockPanel.Dock="Right" Margin="10" BorderBrush="Transparent">
+                                    <materialDesign:PackIcon Kind="Play" VerticalAlignment="Center"/>
+                                </Button>
+
+                                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15 0 0 0" Text="{Binding Name}"/>
+                            </DockPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Border>
+    </DockPanel>
+</Window>

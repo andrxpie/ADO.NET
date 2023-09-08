@@ -13,8 +13,8 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="MainWindow" Height="450" Width="800">
-    <DockPanel>
+        Title="Spotify Lite" Icon="images\spotifyLite.png" Height="600" MinHeight="600" Width="1200" MinWidth="1200">
+    <DockPanel LastChildFill="False">
         <DockPanel DockPanel.Dock="Left">
             <StackPanel DockPanel.Dock="Top" Background="{StaticResource PrimaryHueMidBrush}" Margin="5">
                 <Button Background="Transparent" BorderBrush="Transparent" Margin="5 5 5 0" FontSize="10" HorizontalContentAlignment="Left">
@@ -34,7 +34,7 @@
 
             <UniformGrid Rows="1" Background="{StaticResource PrimaryHueMidBrush}" Margin="5">
                 <StackPanel>
-                    <Button Background="Transparent" BorderBrush="Transparent" Margin="5 5 5 0" FontSize="10" HorizontalContentAlignment="Left" Click="InstallAppButton">
+                    <Button Background="Transparent" BorderBrush="Transparent" Margin="5 5 5 0" FontSize="10" HorizontalContentAlignment="Left">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon VerticalAlignment="Center" Kind="Library" Margin="0 0 2 0"/>
                             <TextBlock VerticalAlignment="Center" FontSize="12">Your Library</TextBlock>
@@ -50,44 +50,52 @@
 
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Right">
             <Border Background="{StaticResource MaterialDesignDarkForeground}" CornerRadius="15" Margin="0 10">
-                <Button Background="Transparent" BorderBrush="Transparent" Foreground="Black">Explore Premium</Button>
+                <Button Background="Transparent" BorderBrush="Transparent" Foreground="Black" Click="ExplorePremiumButton">Explore Premium</Button>
             </Border>
 
             <Border Background="Black" CornerRadius="15" Margin="10 10 10 10">
-                <Button Background="Transparent" BorderBrush="Transparent">
+                <Button Background="Transparent" BorderBrush="Transparent" Click="InstallAppButton">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="Download" VerticalAlignment="Bottom"/>
                         <TextBlock Text="Install App"/>
                     </StackPanel>
                 </Button>
             </Border>
+
+            <Border Height="30" Width="30" CornerRadius="15" Margin="0 10 10 10" BorderThickness="2" BorderBrush="#252525">
+                <Border.Background>
+                    <ImageBrush Stretch="Fill" ImageSource="{Binding currUser.Avatar}"/>
+                </Border.Background>
+            </Border>
         </StackPanel>
 
-        <Border Margin="5">
-            <ItemsControl ItemsSource="{Binding lastest}">
+        <Border MinHeight="360" MaxHeight="360" Margin="5" DockPanel.Dock="Top">
+            <ItemsControl ItemsSource="{Binding avaiableAlbums}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <UniformGrid/>
+                        <UniformGrid Columns="3" Rows="3"/>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Grid Grid.RowSpan="2" Background="#595959">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
+                        <Border CornerRadius="5" Background="#393939" Margin="5">
+                            <DockPanel>
+                                <Border CornerRadius="5" DockPanel.Dock="Left" MinHeight="110" MaxHeight="110" MinWidth="110" MaxWidth="110">
+                                    <Border.Background>
+                                        <ImageBrush Stretch="UniformToFill" ImageSource="{Binding Picture}"/>
+                                    </Border.Background>
+                                </Border>
 
-                            <Image Margin="5" Grid.Column="0" Source="{Binding Picture}"/>
-                            <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Name}"/>
-                        </Grid>
+                                <Button DockPanel.Dock="Right" Margin="10" BorderBrush="Transparent" Click="MainAlbumChoiseButton">
+                                    <materialDesign:PackIcon Kind="Play" VerticalAlignment="Center"/>
+                                </Button>
+
+                                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15 0 0 0" Text="{Binding Name}"/>
+                            </DockPanel>
+                        </Border>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
-        </Border>                
+        </Border>
     </DockPanel>
 </Window>

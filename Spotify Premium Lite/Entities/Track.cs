@@ -15,7 +15,7 @@ namespace Spotify_Premium_Lite
         public Album Album { get; set; }
         public int Listens { get; set; }
         public TimeSpan Duration { get; set; }
-        public string? Picture { get; set; }
+        public string? Picture { get; set; } = "images\\spotifyLite.png";
         public ICollection<Playlist> Playlists { get; set; }
         public string? Lyrics { get; set; }
     }
