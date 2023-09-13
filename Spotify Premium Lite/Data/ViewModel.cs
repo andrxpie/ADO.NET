@@ -12,11 +12,12 @@ namespace Spotify_Premium_Lite
     {
         public SpotifyLiteDbContext database { get; set; }
         public ICollection<Album> avaiableAlbums => database.Albums.ToList();
-        public User currUser => database.Users.Where(x => x.Id == 2).First();
+        public User currUser { get; set; }
 
-        public ViewModel(SpotifyLiteDbContext db)
+        public ViewModel(SpotifyLiteDbContext db, User currUser)
         {
             database = db;
+            this.currUser = currUser;
         }
     }
 }
