@@ -51,7 +51,7 @@
         </DockPanel>
 
         <Border Margin="5">
-            <ItemsControl ItemsSource="{Binding tracks}">
+            <ItemsControl ItemsSource="{Binding currAlbumTracks}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel/>

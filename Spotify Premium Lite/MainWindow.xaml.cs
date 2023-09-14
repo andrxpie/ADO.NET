@@ -20,9 +20,10 @@ namespace Spotify_Premium_Lite
     /// </summary>
     public partial class MainWindow : Window
     {
+        ViewModel vm = new();
         public MainWindow()
         {
-            DataContext = new ViewModel();
+            DataContext = vm;
         }
 
         private void InstallAppButton(object sender, RoutedEventArgs e)
@@ -42,8 +43,10 @@ namespace Spotify_Premium_Lite
 
             Hide();
 
-            ListWindow listWindow = new(album);
-            listWindow.ShowDialog();
+            ((ViewModel)DataContext).currAlbum = album;
+
+            ListWindow lw = new ListWindow(vm);
+            lw.ShowDialog();
 
             Show();
         }

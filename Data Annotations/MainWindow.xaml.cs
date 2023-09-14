@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Loadings;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,16 +11,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Spotify_Premium_Lite
+namespace Data_Annotations
 {
-    public partial class ListWindow : Window
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
     {
-        public ListWindow(ViewModel vm)
+        ShopDB shopDB = new();
+        public ICollection<Shop> shops => shopDB.Shops.ToArray();
+        public MainWindow()
         {
             InitializeComponent();
-            DataContext = vm;
+            
+            grid.ItemsSource = shops;
         }
     }
 }

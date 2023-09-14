@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loadings", "Loadings\Loadin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF - Airlines (hw)", "EF - Airlines (hw)\EF - Airlines (hw).csproj", "{CE18764F-A0DC-4935-982F-5E64B018AD89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spotify Premium Lite", "Spotify Premium Lite\Spotify Premium Lite.csproj", "{488AB7AA-0FF3-4A77-8A4F-287B1FFC6A5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spotify Premium Lite", "Spotify Premium Lite\Spotify Premium Lite.csproj", "{488AB7AA-0FF3-4A77-8A4F-287B1FFC6A5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data Annotations", "Data Annotations\Data Annotations.csproj", "{8EBFB812-6A36-4F02-83F9-1E129C7837AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{488AB7AA-0FF3-4A77-8A4F-287B1FFC6A5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{488AB7AA-0FF3-4A77-8A4F-287B1FFC6A5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{488AB7AA-0FF3-4A77-8A4F-287B1FFC6A5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EBFB812-6A36-4F02-83F9-1E129C7837AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EBFB812-6A36-4F02-83F9-1E129C7837AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EBFB812-6A36-4F02-83F9-1E129C7837AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EBFB812-6A36-4F02-83F9-1E129C7837AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
