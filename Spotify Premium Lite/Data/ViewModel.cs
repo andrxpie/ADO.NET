@@ -11,17 +11,14 @@ namespace Spotify_Premium_Lite
 {
     public class ViewModel
     {
-        public SpotifyLiteDbContext database = new();
+        public SpotifyLiteDbContext database { get; set; }
         public ICollection<Album> avaiableAlbums => database.Albums.ToList();
-        public User currUser => database.Users.Where(x => x.Id == 2).First();
+        public User currUser { get; set; }
 
-        public Album currAlbum { get; set; }
-        ICollection<Track> currAlbumTracks => currAlbum.Tracks.ToList();
-        public string currAlbumPopularity => "Popularity: " + currAlbum.Listens.ToString() + " listens on Spotify";
-
-        public ViewModel()
+        public ViewModel(SpotifyLiteDbContext db, User currUser)
         {
-
+            database = db;
+            this.currUser = currUser;
         }
     }
 }

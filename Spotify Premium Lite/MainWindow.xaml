@@ -86,7 +86,7 @@
                                     </Border.Background>
                                 </Border>
 
-                                <Button DockPanel.Dock="Right" Margin="10" BorderBrush="Transparent" Click="MainAlbumChoiseButton">
+                                <Button DockPanel.Dock="Right" Margin="10" Click="MainAlbumChoiseButton">
                                     <materialDesign:PackIcon Kind="Play" VerticalAlignment="Center"/>
                                 </Button>
 
