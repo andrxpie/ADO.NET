@@ -20,9 +20,12 @@ namespace Spotify_Premium_Lite
     /// </summary>
     public partial class MainWindow : Window
     {
+        ViewModel vm;
         public MainWindow(SpotifyLiteDbContext db, User currUser)
         {
-            DataContext = new ViewModel(db, currUser);
+            InitializeComponent();
+            vm = new(db, currUser);
+            DataContext = vm;
         }
 
         private void InstallAppButton(object sender, RoutedEventArgs e)
@@ -41,8 +44,6 @@ namespace Spotify_Premium_Lite
             var album = (Album)button.DataContext;
 
             Hide();
-
-            ((ViewModel)DataContext).currAlbum = album;
 
             ListWindow lw = new ListWindow(vm);
             lw.ShowDialog();
