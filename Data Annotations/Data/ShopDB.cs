@@ -7,6 +7,8 @@ namespace Data_Annotations
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
+            
+            optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ShopDB;Integrated Security=True;Connect Timeout=2;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
