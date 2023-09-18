@@ -20,7 +20,7 @@ namespace Spotify_Premium_Lite
     /// </summary>
     public partial class MainWindow : Window
     {
-        ViewModel vm;
+        public ViewModel vm;
         public MainWindow(SpotifyLiteDbContext db, User currUser)
         {
             InitializeComponent();

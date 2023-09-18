@@ -21,7 +21,7 @@
 
             <DockPanel LastChildFill="False" HorizontalAlignment="Center" Width="200">
                 <Border DockPanel.Dock="Left" Background="{StaticResource MaterialDesignDarkForeground}" CornerRadius="15" Margin="10 10">
-                    <Button Background="Transparent" BorderBrush="Transparent" Foreground="Black" Click="LogInButton">Log In</Button>
+                    <Button Background="Transparent" BorderBrush="Transparent" Foreground="Black" Click="LogInButton" IsDefault="True">Log In</Button>
                 </Border>
 
                 <Border DockPanel.Dock="Right" Background="Black" CornerRadius="15" Margin="10 10 10 10">
