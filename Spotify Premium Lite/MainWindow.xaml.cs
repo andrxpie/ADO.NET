@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Spotify_Premium_Lite
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public ViewModel vm;
@@ -45,7 +42,7 @@ namespace Spotify_Premium_Lite
 
             Hide();
 
-            ListWindow lw = new ListWindow(vm);
+            ListWindow lw = new ListWindow(vm, album);
             lw.ShowDialog();
 
             Show();

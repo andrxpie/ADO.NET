@@ -16,10 +16,12 @@ namespace Spotify_Premium_Lite
 {
     public partial class ListWindow : Window
     {
-        public ListWindow(ViewModel vm)
+        public Album currAlbum { get; set; }
+        public ListWindow(ViewModel vm, Album currAlbum)
         {
             InitializeComponent();
             DataContext = vm;
+            this.currAlbum = currAlbum;
         }
     }
 }
