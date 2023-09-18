@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace Spotify_Premium_Lite
 {
-    /// <summary>
-    /// Interaction logic for AuthorizationWindow.xaml
-    /// </summary>
     public partial class AuthorizationWindow : Window
     {
         SpotifyLiteDbContext db = new();
