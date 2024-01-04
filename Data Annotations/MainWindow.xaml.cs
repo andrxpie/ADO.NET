@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,12 +19,21 @@ namespace Data_Annotations
     public partial class MainWindow : Window
     {
         ShopDB shopDB = new();
-        public ICollection<Shop> shops => shopDB.Shops.ToArray();
         public MainWindow()
         {
             InitializeComponent();
-            
-            grid.ItemsSource = shops;
+        }
+
+        private void SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            grid = new();
+
+            switch (tabs.SelectedIndex)
+            {
+                case 0: grid.ItemsSource = shopDB.Shops.ToList(); break;
+                case 1: grid.ItemsSource = shopDB.Workers.ToArray(); break;
+                case 2: grid.ItemsSource = shopDB.Products.ToArray(); break;
+            }
         }
     }
 }

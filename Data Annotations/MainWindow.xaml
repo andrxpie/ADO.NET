@@ -15,7 +15,7 @@
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
-        <TabControl DockPanel.Dock="Top">
+        <TabControl x:Name="tabs" DockPanel.Dock="Top" SelectionChanged="SelectionChanged">
             <TabItem Header="Shops" IsSelected="True"/>
             <TabItem Header="Workers" IsSelected="False"/>
             <TabItem Header="Products" IsSelected="False"/>
